@@ -36,3 +36,27 @@ document.addEventListener('DOMContentLoaded', function () {
       smartSpeed: 600
     });
   });
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.side-menu-categories__list-level-1 > .side-menu-categories__list-item > a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const parentLi = this.parentElement;
+        const submenu = parentLi.querySelector('.side-menu-categories__list-level-2');
+        if (submenu) {
+          e.preventDefault();
+          parentLi.classList.toggle('open');
+        }
+      });
+    });
+
+    document.querySelectorAll('.side-menu-categories__list-level-2 > .side-menu-categories__list-item > a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const parentLi = this.parentElement;
+        const submenu = parentLi.querySelector('.side-menu-categories__list-level-3');
+        if (submenu) {
+          e.preventDefault();
+          parentLi.classList.toggle('open');
+        }
+      });
+    });
+  });
