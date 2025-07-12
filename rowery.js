@@ -49,6 +49,26 @@
       });
     }
 
+  const questions = document.querySelectorAll('.faq-question');
+  const answers = document.querySelectorAll('.faq-answer');
+
+  if (!questions.length || !answers.length) return; // Nic nie rób jeśli brak elementów
+
+  questions.forEach(button => {
+    button.addEventListener('click', () => {
+      const answer = button.nextElementSibling;
+      const isOpen = answer && answer.style.display === 'block';
+
+      answers.forEach(a => {
+        if (a) a.style.display = 'none';
+      });
+
+      if (!isOpen && answer) {
+        answer.style.display = 'block';
+      }
+    });
+  });
+    
     // Side menu
     document.querySelectorAll('.side-menu-categories__list-item').forEach(li => {
       const submenu = li.querySelector('ul');
