@@ -56,6 +56,16 @@
     });
   }
 
+    const source = document.querySelector('.produkty-promocje');
+    const target = document.querySelector('.promotion-products');
+
+    if (source instanceof HTMLElement && target instanceof HTMLElement) {
+      while (source.firstChild) {
+        target.appendChild(source.firstChild);
+      }
+      source.remove();
+    }
+
   initFAQToggle();
 
     const socialLinks = [
