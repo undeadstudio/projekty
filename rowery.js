@@ -66,6 +66,20 @@
       source.remove();
     }
 
+       const toggle = document.getElementById("contact-toggle");
+    const panel = document.getElementById("contact-panel");
+
+    toggle.addEventListener("click", function (e) {
+      e.stopPropagation();
+      panel.classList.toggle("open");
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!toggle.contains(e.target)) {
+        panel.classList.remove("open");
+      }
+    });
+
   initFAQToggle();
 
     const socialLinks = [
