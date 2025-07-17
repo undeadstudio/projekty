@@ -66,18 +66,18 @@
       source.remove();
     }
 
-       const toggle = document.getElementById("contact-toggle");
-    const panel = document.getElementById("contact-panel");
+    const fabMain = document.getElementById("fab-main");
+    const fabActions = document.getElementById("fab-actions");
+    const fabClose = document.getElementById("fab-close");
 
-    toggle.addEventListener("click", function (e) {
-      e.stopPropagation();
-      panel.classList.toggle("open");
+    fabMain.addEventListener("click", function () {
+      fabActions.style.display = "flex";
+      fabMain.style.display = "none";
     });
 
-    document.addEventListener("click", function (e) {
-      if (!toggle.contains(e.target)) {
-        panel.classList.remove("open");
-      }
+    fabClose.addEventListener("click", function () {
+      fabActions.style.display = "none";
+      fabMain.style.display = "flex";
     });
 
   initFAQToggle();
