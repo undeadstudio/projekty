@@ -56,8 +56,8 @@
     });
   }
 
-    const source = document.querySelector('.produkty-promocje2');
-    const target = document.querySelector('.promotion-products2');
+    const source = document.querySelector('.produkty-promocje');
+    const target = document.querySelector('.promotion-products');
 
     if (source instanceof HTMLElement && target instanceof HTMLElement) {
       while (source.firstChild) {
@@ -67,8 +67,8 @@
     }
 
 
-    const source2 = document.querySelector('.produkty-produktdnia2');
-    const target2 = document.querySelector('.day-products2');
+    const source2 = document.querySelector('.produkty-produktdnia');
+    const target2 = document.querySelector('.day-products');
 
     if (source2 instanceof HTMLElement && target2 instanceof HTMLElement) {
       while (source2.firstChild) {
