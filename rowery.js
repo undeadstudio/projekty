@@ -66,6 +66,17 @@
       source.remove();
     }
 
+
+    const source2 = document.querySelector('.produkty-produktdnia');
+    const target2 = document.querySelector('.day-products');
+
+    if (source2 instanceof HTMLElement && target2 instanceof HTMLElement) {
+      while (source2.firstChild) {
+        target2.appendChild(source2.firstChild);
+      }
+      source2.remove();
+    }
+
     const fabMain = document.getElementById("fab-main");
     const fabActions = document.getElementById("fab-actions");
     const fabClose = document.getElementById("fab-close");
