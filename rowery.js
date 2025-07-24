@@ -56,7 +56,7 @@
     });
   }
 
-    const source = document.querySelector('.produkty-promocje');
+    const source = document.querySelector('.produkty-promocje2');
     const target = document.querySelector('.promotion-products');
 
     if (source instanceof HTMLElement && target instanceof HTMLElement) {
@@ -67,7 +67,7 @@
     }
 
 
-    const source2 = document.querySelector('.produkty-produktdnia');
+    const source2 = document.querySelector('.produkty-produktdnia2');
     const target2 = document.querySelector('.day-products');
 
     if (source2 instanceof HTMLElement && target2 instanceof HTMLElement) {
