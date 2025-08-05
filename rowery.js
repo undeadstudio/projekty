@@ -109,13 +109,11 @@
         santanderEraty_link.href = `javascript:window.open('${santanderEraty_linkUrl}', '', 'height=750,width=850,location=no,resizable=yes,scrollbars=yes,status=0;')`;
         santanderEraty_link.setAttribute('data-window', `window.open('${santanderEraty_linkUrl}', '', 'height=750,width=850,location=no,resizable=yes,scrollbars=yes,status=0;')`);
 
-        // Dodawanie treści HTML do linku
         santanderEraty_link.innerHTML = `
             <img src="https://sklep445584.shoparena.pl/userdata/public/assets//eraty.png" alt="eRaty">
             <span>eRaty Santander Consumer Bank (oblicz ratę)</span>
         `;
 
-        // Dodawanie linku do kontenera
         santanderEraty_container.appendChild(santanderEraty_link);
     }
 
