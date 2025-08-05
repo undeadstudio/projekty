@@ -94,7 +94,7 @@
   initFAQToggle();
 
 
-    const santanderEraty_container = document.querySelector('#santander-eraty-box');
+    const santanderEraty_container = document.querySelector('#eraty-container');
     const santanderEraty_priceElement = document.querySelector('.product-price .product-price__base-price .price__value');
 
     if (santanderEraty_container && santanderEraty_priceElement) {
