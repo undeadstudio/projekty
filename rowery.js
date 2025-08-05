@@ -101,7 +101,7 @@
         const santanderEraty_rawPrice = santanderEraty_priceElement.textContent.replace(/[^\d,\.]/g, '').replace(',', '.');
         const santanderEraty_price = parseFloat(santanderEraty_rawPrice).toFixed(2);
 
-        const santanderEraty_linkUrl = `https://wniosek.eraty.pl/symulator/oblicz/numerSklepu/211012/wariantSklepu/50000/typProduktu/0/wartoscTowarow/${santanderEraty_price}`;
+        const santanderEraty_linkUrl = `https://wniosek.eraty.pl/symulator/oblicz/numerSklepu/0211111/wariantSklepu/50000/typProduktu/0/wartoscTowarow/${santanderEraty_price}`;
 
         const santanderEraty_link = document.createElement('a');
         santanderEraty_link.id = 'eraty-custom-link';
