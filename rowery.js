@@ -95,7 +95,7 @@
 
 
     const santanderEraty_container = document.querySelector('#eraty-container');
-    const santanderEraty_priceElement = document.querySelector('.product-prices .js__product-price-gross .product-price__base-price .price__value');
+    const santanderEraty_priceElement = document.querySelector('.product-prices .js__product-price-gross .product-price__base-price .price__value:not(.js__price__value_inactive)');
 
     if (santanderEraty_container && santanderEraty_priceElement) {
         const santanderEraty_rawPrice = santanderEraty_priceElement.textContent.replace(/[^\d,\.]/g, '').replace(',', '.');
