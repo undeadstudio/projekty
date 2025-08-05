@@ -93,6 +93,32 @@
 
   initFAQToggle();
 
+
+    const santanderEraty_container = document.querySelector('#santander-eraty-box');
+    const santanderEraty_priceElement = document.querySelector('.product-price .product-price__base-price .price__value');
+
+    if (santanderEraty_container && santanderEraty_priceElement) {
+        const santanderEraty_rawPrice = santanderEraty_priceElement.textContent.replace(/[^\d,\.]/g, '').replace(',', '.');
+        const santanderEraty_price = parseFloat(santanderEraty_rawPrice).toFixed(2);
+
+        const santanderEraty_linkUrl = `https://wniosek.eraty.pl/symulator/oblicz/numerSklepu/211012/wariantSklepu/50000/typProduktu/0/wartoscTowarow/${santanderEraty_price}`;
+
+        const santanderEraty_link = document.createElement('a');
+        santanderEraty_link.id = 'eraty-custom-link';
+        santanderEraty_link.className = 'eraty-link-custom-class';
+        santanderEraty_link.href = `javascript:window.open('${santanderEraty_linkUrl}', '', 'height=750,width=850,location=no,resizable=yes,scrollbars=yes,status=0;')`;
+        santanderEraty_link.setAttribute('data-window', `window.open('${santanderEraty_linkUrl}', '', 'height=750,width=850,location=no,resizable=yes,scrollbars=yes,status=0;')`);
+
+        // Dodawanie treści HTML do linku
+        santanderEraty_link.innerHTML = `
+            <img src="https://sklep445584.shoparena.pl/userdata/public/assets//eraty.png" alt="eRaty">
+            <span>eRaty Santander Consumer Bank (oblicz ratę)</span>
+        `;
+
+        // Dodawanie linku do kontenera
+        santanderEraty_container.appendChild(santanderEraty_link);
+    }
+
     const socialLinks = [
     {
       href: "https://www.facebook.com/share/1Buv42aGZz/?mibextid=wwXIfr",
