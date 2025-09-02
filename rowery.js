@@ -154,6 +154,36 @@ if (container && !container.dataset.socialIconsInitialized) {
   });
 }
 
+  document.querySelectorAll(".product-tile__availability-value").forEach(function (el) {
+    if (el.textContent.trim() === "Dostępny telefonicznie") {
+      el.classList.add("product-active-phone");
+    }
+  });
+
+  document.querySelectorAll(".product-availability__description_unavailable").forEach(function (el) {
+    if (el.textContent.trim() === "Dostępny telefonicznie") {
+      el.classList.add("product-active-phone");
+    }
+  });
+
+  var specialBtnProduct = document.querySelector(
+    ".product-info-bar span.btn.btn_full-width.btn_special.btn_special-disabled"
+  );
+
+  if (specialBtnProduct) {
+    var productActions = document.querySelector(".product-info-bar .product-actions");
+    var eratyContainer = document.getElementById("eraty-container");
+
+    if (productActions) {
+      productActions.style.display = "none";
+    }
+
+    if (eratyContainer) {
+      eratyContainer.style.display = "none";
+    }
+  }
+    
+
   document.querySelectorAll('.side-menu-categories__list-item').forEach(li => {
     const submenu = li.querySelector('ul');
     if (submenu && submenu.querySelector('li')) {
